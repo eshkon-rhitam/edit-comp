@@ -6,7 +6,7 @@ interface ComponentState {
 }
 
 const initialState: ComponentState = {
-  selected: null,
+  selected: "Card",
   theme: "theme-light",
 };
 

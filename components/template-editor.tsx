@@ -146,10 +146,6 @@ export default function TemplateEditor<T extends ZodType<any, any>>({
                 unwrappedSchema._def?.values ||
                 unwrappedSchema.options ||
                 [];
-
-              console.log("Enum unwrapped schema:", unwrappedSchema);
-              console.log("Enum values:", values);
-
               return values;
             })();
 

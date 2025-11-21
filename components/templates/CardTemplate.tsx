@@ -21,7 +21,9 @@ export default function CardTemplate() {
     <div className="flex h-full">
       <div className="flex-1 p-4">
         <Card
-          className={clsx("p-4 shadow-lg rounded-md max-w-[450px] mx-auto")}
+          className={clsx(
+            "p-4 shadow-lg rounded-md max-w-[450px] mx-auto sticky top-5"
+          )}
         >
           {cardStats.image.value && cardStats.image.isVisible && (
             // eslint-disable-next-line @next/next/no-img-element
