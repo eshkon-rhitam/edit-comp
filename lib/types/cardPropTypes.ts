@@ -13,7 +13,6 @@ const simpleCard = z.object({
       .enum(["link", "default", "destructive", "outline", "secondary", "ghost"])
       .default("outline"),
   }),
-  subText: focusablePropSchema,
 });
 const getDefaultSimpleCard = () => {
   return simpleCard.parse(
