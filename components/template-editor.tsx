@@ -249,5 +249,5 @@ export default function TemplateEditor<T extends ZodType<any, any>>({
     );
   }
 
-  return <div>Unsupported schema type</div>;
+  return <div>Unsupported schema</div>;
 }
