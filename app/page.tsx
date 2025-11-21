@@ -4,18 +4,14 @@ import { RootState } from "@/lib/store";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import dynamic from "next/dynamic";
 
-type ComponentKey = "Card" | "Accordion";
+type ComponentKey = "Card";
 
 const CardTemplate = dynamic(
   () => import("@/components/templates/CardTemplate")
 );
-const AccordionTemplate = dynamic(
-  () => import("@/components/templates/AccordionTemplate")
-);
 
 const templateMap: Record<ComponentKey, React.ComponentType> = {
   Card: CardTemplate,
-  Accordion: AccordionTemplate,
 };
 
 export default function Page() {
@@ -26,9 +22,9 @@ export default function Page() {
   const SelectedTemplate = selected ? templateMap[selected] : null;
 
   return (
-    <div className="bg-pattern h-full">
+    <div className="bg-pattern h-full w-full flex">
       <SidebarTrigger />
-      <div className="p-4">
+      <div className="h-full w-full">
         {SelectedTemplate ? (
           <SelectedTemplate />
         ) : (

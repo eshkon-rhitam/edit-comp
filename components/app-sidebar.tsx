@@ -18,9 +18,6 @@ const data = {
     {
       title: "Card",
     },
-    {
-      title: "Accordion",
-    },
   ],
 };
 
